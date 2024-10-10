@@ -1,0 +1,4 @@
+django-news, django-shoes
+
+name: administrator
+passwd: 123987qwepoi

@@ -1,0 +1,288 @@
+.container {
+  .container__header {
+    margin-top: 60px;
+
+    .btn {
+      display: inline;
+      background-color: transparent;
+
+      button {
+        background-color: transparent;
+        color: aliceblue;
+        font-size: 18px;
+        padding: 10px 30px;
+      }
+    }
+  }
+
+  .container__shoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    padding-top: 120px;
+
+    .shoes__buy {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 30px;
+      width: 80%;
+      padding-left: 20px;
+    }
+
+    .aside__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 20%;
+      height: 100%;
+
+      .categories {
+        width: 100%;
+        margin-bottom: 20px;
+
+        .title__h5 {
+          color: #FFF;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+        }
+
+        .btn__filter {
+          border-radius: 36px;
+          border: 1px solid #FFF;
+          color: #FFF;
+          font-size: 16px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: transparent;
+          padding: 6px 16px;
+          margin-top: 20px;
+        }
+      }
+
+      .categories__filter {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 30px;
+
+        .btn__gender {
+          padding: 7px 0px;
+          background-color: transparent;
+          color: #FFF;
+          font-style: 500;
+          font-size: 17px;
+          border-bottom: 1px solid rgb(0, 0, 0);
+          transition: all 0.4s;
+        }
+
+        .btn__gender:hover {
+          border-bottom: 1px solid white;
+        }
+
+        .btn__gender.active {
+          border-bottom: 1px solid white;
+          font-size: 18px;
+        }
+      }
+
+      .categories__color {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .btn__checkbox {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          width: 120px;
+          padding: 5px 0px;
+          .checkbox {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            background-color: #fff;
+            transition: all 0.4s ease;
+            margin-right: 10px;
+            position: relative;
+            .gal {
+              position: absolute;
+              width: 0;
+              height: 0px;
+            }
+          }
+          .checkbox.active {
+            background-color: #8a58ff;
+            .gal {
+              height: 2px;
+              background-color: #FFF;
+            }
+            .gal:nth-child(1) {
+              width: 8px;
+              top: 11px;
+              left: 1px;
+              transform: rotate(45deg);
+            }
+            .gal:nth-child(2) {
+              width: 15px;
+              top: 9px;
+              right: 0px;
+              transform: rotate(135deg);
+            }
+          }
+          .span {
+            color: #FFF;
+            font-style: 500;
+            font-size: 17px;
+            transition: all 0.4s;
+          }
+        }
+      }
+
+      .categories__size {
+        height: 230px;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        width: 150px;
+        padding: 20px 0px;
+        .title__h5 {
+          padding-bottom: 5px;
+        }
+
+        .size__label {
+          padding-top: 30px;
+        }
+
+        .input__categories {
+          padding-top: 5px;
+        }
+
+        .input__categories:nth-child(-n+5) {
+          display: flex;
+        }
+
+
+        .input__categories-start {
+          display: none;
+          animation-name: card__animate;
+          animation-duration: 1s;
+        }
+
+        .btn__checkbox {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          width: 60px;
+          padding: 5px 0px;
+          .checkbox {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            background-color: #fff;
+            transition: all 0.4s ease;
+            margin-right: 10px;
+            position: relative;
+            .gal {
+              position: absolute;
+              width: 0;
+              height: 0px;
+            }
+          }
+          .checkbox.active {
+            background-color: #8a58ff;
+            .gal {
+              height: 2px;
+              background-color: #FFF;
+            }
+            .gal:nth-child(1) {
+              width: 8px;
+              top: 11px;
+              left: 1px;
+              transform: rotate(45deg);
+            }
+            .gal:nth-child(2) {
+              width: 15px;
+              top: 9px;
+              right: 0px;
+              transform: rotate(135deg);
+            }
+          }
+          .span {
+            color: #FFF;
+            font-style: 500;
+            font-size: 17px;
+            transition: all 0.4s;
+          }
+        }
+
+      }
+      .categories__size.active {
+        height: 400px;
+        transition: all 0.4s ease;
+        overflow-y: auto;
+      }
+      .btn-size {
+        margin-bottom: 20px;
+        padding: 6px 14px;
+        border-radius: 8px;
+      }
+      .price__filter {
+        padding-top: 30px;
+        .input {
+          margin-bottom: 15px;
+          padding: 10px 15px;
+          color: #FFF;
+          background-color: black;
+          border-radius: 24px;
+          width: 200px;
+          border: 1px solid white;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;          
+        }
+      }
+
+    }
+  }
+}
+
+@keyframes categories__animate {
+  0% {
+    display: block;
+    height: 220px;
+  }
+
+  80% {
+    height: 400px;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes card__animate {
+  0% {
+    display: block;
+    opacity: 1;
+
+    height: 0px;
+  }
+
+  80% {
+    height: 26px;
+    opacity: 1;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
